@@ -11,14 +11,14 @@ Source d’aide en cas de difficultés : M. Borie, le cours, internet
 
 ## Table des matières
 [Introduction](#Introduction)
-[Les TP réalisés : ](#Les TP réalisés :)
-[TP2](#TP2, Premiers programmes)
-[Projet "Deviner un entier secret"](Projet Deviner un entier secret)
-[TP3](#TP3 : D’autres programmes)
-[TP5](#TP5 Tableaux d’entiers se finissant par –1 (et son main.c))
-[TP8](TP8 : Challenge Syracuse : récursion et mémoïsation (hauteur de vol max pour n <= 200 000 000))
-[TP9](#TP 9 : Exercices avec malloc)
-[TP10](#TP 10 : tri multicritères sur liste chainées de personnes (incomplet))
+[Les TP réalisés : ](##Les-TP-réalisés-:)
+[TP2](#TP2,-Premiers-programmes)
+["Deviner un entier secret"](#Projet-Deviner-un-entier-secret)
+[TP3](#TP3-:-D’autres-programmes)
+[TP5](#TP5-Tableaux-d’entiers)
+[TP8](#TP8,-Challenge-Syracuse)
+[TP9](#TP9,-Exercices-avec-malloc)
+[TP10](#TP-10,-tri-multicritères)
 
 ## Les TP réalisés : 
 ---
@@ -102,7 +102,7 @@ Pour que le main soit plus propre.
 Le tri se fait correctement pour différentes tailles de tableaux, en revanche les valeurs aléatoires
 sont toutes positives.
 
-## TP5 Tableaux d’entiers se finissant par –1 (et son main.c)
+## TP5 Tableaux d’entiers
 ---
 Fonctions simples pour des tableaux et fonctions pour un tri fusion. la première partie du TP était plutôt simple car j'avais déjà fait certaines parties dans les exercices d'avant juste pour être à l'aise avec mes tests. Je n'avais jamais fait de tri fusion avant.
 
@@ -115,11 +115,12 @@ Ce que j’ai appris : Faire un tri fusion
 Preuve factuelle :
 J’ai un affichage similaire à l’exemple du tp5, et des tableaux de différentes tailles finissent triés
 (même si pour les tableaux de grande taille l’affichage dans le terminal est interminable).
-## TP8 : Challenge Syracuse : récursion et mémoïsation (hauteur de vol max pour n <= 200 000 000)
+## TP8, Challenge Syracuse
 ---
 Ce TP a été plutôt pratique pour revoir la récursivité car je n'y suis pas habitué.
+Cependant je ne suis pas sûr d'avoir bien compris si la valeur maximale (pour le tableau de memo) doit atteindre 200 millions ou si on doit calculer la hauteur de vol maximale pour les entrées de 1 à 200 millions, j'ai donc mis la valeur du tableau à 200 millions (1ere option).
 
-## TP 9 : Exercices avec malloc
+## TP9, Exercices avec malloc
 ---
 Valgrind pour montrer que les malloc sont faits correctement, assez pratique.
 
@@ -145,7 +146,7 @@ Ce que j‘ai appris : utiliser strcpy pour recopier une chaine de caractère da
 Preuve factuelle : Les valeurs des tableaux copiés sont correctes.
 Valgrind ne renvoie pas de problèmes.
 
-## TP 10 : tri multicritères sur liste chainées de personnes (incomplet)
+## TP 10, tri multicritères
 ---
 J'ai peut être visé trop haut avec ce TP, j'ai réussi l'exercice 1 mais pour la fonction principale du 2 je n'y suis pas du tout.
 
