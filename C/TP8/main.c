@@ -6,7 +6,7 @@ But : TP
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 100
+#define SIZE 200000
 
 /*Si l'entrée est pair retourne val/2 sinon retourne 3*val+1*/
 unsigned long int siPair (unsigned long int  val){
@@ -46,12 +46,14 @@ unsigned long int memoisation(unsigned long int val, unsigned long int* tab){
 
 int main(int argc, char const *argv[])
 {
-    
+
     unsigned long int i,vol,max=0;
     int pos;
+
     unsigned long int tab[SIZE];
-    for(i=0;i<=SIZE;i++) tab[i]=-1;
-    for (i=1;i<=SIZE;i++){
+    for(i=0;i<=100;i++) tab[i]=-1;
+
+    for (i=1;i<=100;i++){
         vol=memoisation(i,tab);
         if(vol>max){
             max=vol;
@@ -62,13 +64,13 @@ int main(int argc, char const *argv[])
         tab[i]=vol;
     }
 
-    printf("Plus longue distance de vol : %ld pour la valeur %d",max,pos);
-
+    printf("Plus longue distance de vol : %ld pour la valeur %d\n",max,pos);
 /*
-    unsigned long int test=97;
+
+    unsigned long int test=27;
     printf("Test value : %ld\n",test);
-    printf("Longueur de vol : %d\n",memoisation(test,tab));
-    printf("Longueur de vol : %d\n",syrInput(test));
+    printf("Longueur de vol : %ld\n",memoisation(test,tab));
+    printf("Longueur de vol : %ld\n",syrInput(test));
 */
     return 0;
 }
