@@ -50,7 +50,7 @@ int main(int argc, char const *argv[])
     else if (errno ==0 && argv[2] && *remaining != 0) printf("Additionnal characters were ignored.\n");
     printf("%d + %d = %d\n",a,b,a+b);
     }
-     if (argc>3) printf("Number of arguments: %d. This program will ignore all arguments except the first 2, which should be numbers.\n",argc);
+    else if (argc>3) printf("Number of arguments: %d. This program will ignore all arguments except the first 2, which should be numbers.\n",argc);
     else printf("You didn't enter a number / not enough numbers so nothing is gonna happen. (need 2 numbers to perform addition)\n");
    
     return 0;
