@@ -3,7 +3,7 @@
 # **Portfolio**
 ## Introduction
 ---
-TP réalisés : TP 2, TP 3 (en partie), TP 9, une partie du TP 10
+
 J’ai choisi de ne pas suivre le fil rouge car je ne connaissais pas vraiment malloc mais je
 connaissais déjà des bases rudimentaires du C. J’ai donc fait le TP malloc après quelques TPs.
 
@@ -31,6 +31,7 @@ Source d’aide en cas de difficultés : M. Borie, le cours, internet
 
 ## Les TP réalisés
 ---
+TP 2, TP 3 (en partie), TP 9, une partie du TP 10
 
 ## TP2, Premiers programmes
 ---
@@ -177,4 +178,10 @@ niveau conception.
 
 ## Conclusion
 ---
-Je suis toujours assez partagé entre strictement suivre le TP ou alors maximiser l'expérience utilisateur / la fonction du programme, car la "2nde option" prend + de temps et j'aurais pu faire + de TP / projets si j'avais strictement réalisé les TP. Cependant
+Je suis toujours assez partagé entre strictement suivre le TP ou alors maximiser l'expérience utilisateur / la fonction du programme, car la "2nde option" prend + de temps et j'aurais pu faire + de TP / projets si j'avais strictement réalisé les TP. Cependant passer + de temps sur les TP et y faire des améliorations qui ne sont pas demandées m'a été utile + d'une fois donc je pense que je continuerai à le faire quand c'est possible.
+
+## Total points accumulés
+---
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Total | 44 | 6 | 7 | 7 | 0 | 6 | 5 | 5 | 3 | 2 | 2 | 1 | 0 | 0 | 0 | 
