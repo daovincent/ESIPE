@@ -14,7 +14,7 @@ Source d’aide en cas de difficultés : M. Borie, le cours, internet
 [Les TP réalisés : ](##Les-TP-réalisés-:)
 [TP2](#TP2,-Premiers-programmes)
 ["Deviner un entier secret"](#Projet-Deviner-un-entier-secret)
-[TP3](#TP3-:-D’autres-programmes)
+[TP3](#TP3,-Dautres-programmes)
 [TP5](#TP5-Tableaux-d’entiers)
 [TP8](#TP8,-Challenge-Syracuse)
 [TP9](#TP9,-Exercices-avec-malloc)
@@ -74,7 +74,7 @@ L'utilisateur entre un entier positif pour le max du nombre qu'il faudra trouver
 Ensuite, il essaie de trouver le nombre qui a été généré aléatoirement.
 J'ai juste ajouté une fonction supplémentaire pour qu'il puisse abandonner.
 
-## TP3 : D’autres programmes
+## TP3, D’autres programmes
 ---
 Toujours sur des bases, je n'ai pas fait l'exercice 2 et 3 car je les avait déjà faits en DUT.
 
