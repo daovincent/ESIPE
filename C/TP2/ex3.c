@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     /*reset errno to 0 before each call*/
     errno=0;
     int n=strtol(argv[1], &remaining,10);
-    if (argv[1]==NULL){
+    if ( argc<2 ||argv[1]==NULL){
         printf("Il faut entrer un entier positif en argument lors de l'exec. \n");
         return 0;
     }
@@ -57,6 +57,6 @@ int main(int argc, char const *argv[])
     }
     printf("\nRecursive ver : \n");
     printNumbersDesc(n,n);
-
+    printf("\n");
     return 0;
 }
