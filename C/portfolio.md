@@ -10,15 +10,15 @@ connaissais déjà des bases rudimentaires du C. J’ai donc fait le TP malloc a
 Source d’aide en cas de difficultés : M. Borie, le cours, internet
 
 ## Table des matières
-[Introduction](#Introduction)
-[Les TP réalisés : ](##Les-TP-réalisés-:)
-[TP2](#TP2,-Premiers-programmes)
-["Deviner un entier secret"](#Projet-Deviner-un-entier-secret)
-[TP3](#TP3,-Dautres-programmes)
-[TP5](#TP5-Tableaux-d’entiers)
-[TP8](#TP8,-Challenge-Syracuse)
-[TP9](#TP9,-Exercices-avec-malloc)
-[TP10](#TP-10,-tri-multicritères)
+.[Introduction](#Introduction)
+.[Les TP réalisés : ](##Les-TP-réalisés-:)
+.[TP2](#TP2,-Premiers-programmes)
+.["Deviner un entier secret"](#Projet-Deviner-un-entier-secret)
+.[TP3](#TP3,-Dautres-programmes)
+.[TP5](#TP5-Tableaux-d’entiers)
+.[TP8](#TP8,-Challenge-Syracuse)
+.[TP9](#TP9,-Exercices-avec-malloc)
+.[TP10](#TP-10,-tri-multicritères)
 
 ## Les TP réalisés : 
 ---
