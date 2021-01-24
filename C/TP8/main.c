@@ -39,7 +39,7 @@ int dejaVu (unsigned long int val, unsigned long int* tab){
 /*Calcule la longueur de vol avec la methode memoisation*/
 unsigned long int memoisation(unsigned long int val, unsigned long int* tab){
     if(val==1) return 0;
-    if(dejaVu(val,tab)==-1) return tab[val];
+    if(dejaVu(val,tab)) return tab[val];
     return 1+ memoisation(siPair(val),tab);
 
 }
@@ -51,9 +51,9 @@ int main(int argc, char const *argv[])
     int pos;
 
     unsigned long int tab[SIZE];
-    for(i=0;i<=100;i++) tab[i]=-1;
+    for(i=0;i<=SIZE;i++) tab[i]=-1;
 
-    for (i=1;i<=100;i++){
+    for (i=1;i<=30;i++){
         vol=memoisation(i,tab);
         if(vol>max){
             max=vol;
@@ -62,11 +62,11 @@ int main(int argc, char const *argv[])
         printf("%ld\n",i);
         printf("Distance de vol : %ld\n", vol);
         tab[i]=vol;
+        printf("valeur de i : %ld vol de i : %ld\n",i,tab[i]);
     }
 
     printf("Plus longue distance de vol : %ld pour la valeur %d\n",max,pos);
 /*
-
     unsigned long int test=27;
     printf("Test value : %ld\n",test);
     printf("Longueur de vol : %ld\n",memoisation(test,tab));
