@@ -83,7 +83,7 @@ int main(int argc, char const *argv[])
     printf("La valeur est : %d\n",cible);
     int res=binarySearch(t,size,cible);
     if(res>0) printf("La position de la valeur est : %d",res);
-    else printf("La valeur n'est pas dans le tableau");
+    else printf("La valeur n'est pas dans le tableau\n");
 
     free(t);
     return 0;
