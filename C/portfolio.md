@@ -9,7 +9,7 @@ connaissais déjà des bases rudimentaires du C. J’ai donc fait le TP malloc a
 
 Source d’aide en cas de difficultés : M. Borie, le cours, internet
 
-Vous trouverez [mon github avec les projets ainsi que ce même document ici](https://github.com/daovincent/ESIPE/tree/main/C)
+Vous trouverez [mon github avec les projets ainsi que ce même document ici](https://github.com/daovincent/ESIPE/tree/main/C) (Document que je conseille de lire sur github plutôt qu'en pdf)
 
 [Les sujets des TP ici](http://igm.univ-mlv.fr/~borie/ressources_info1.php)
 
