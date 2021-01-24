@@ -92,6 +92,10 @@ L'utilisateur entre un entier positif pour le max du nombre qu'il faudra trouver
 Ensuite, il essaie de trouver le nombre qui a été généré aléatoirement.
 J'ai juste ajouté une fonction supplémentaire pour qu'il puisse abandonner.
 
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Deviner Entier Secret | 4 | 1 | 1 | 1 | | 1 |  | | | | |  | | 
+
 ## TP3, D’autres programmes
 ---
 Toujours sur des bases, je n'ai pas fait l'exercice 2 et 3 car je les avait déjà faits en DUT.
@@ -120,6 +124,10 @@ Pour que le main soit plus propre.
 Le tri se fait correctement pour différentes tailles de tableaux, en revanche les valeurs aléatoires
 sont toutes positives.
 
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP3 | 6 | 1 | 1 | 1 | | 1 | 1 | 1 | | | |  | | 
+
 ## TP5 Tableaux d’entiers
 ---
 Fonctions simples pour des tableaux et fonctions pour un tri fusion. la première partie du TP était plutôt simple car j'avais déjà fait certaines parties dans les exercices d'avant juste pour être à l'aise avec mes tests. Je n'avais jamais fait de tri fusion avant.
@@ -133,10 +141,19 @@ Ce que j’ai appris : Faire un tri fusion
 Preuve factuelle :
 J’ai un affichage similaire à l’exemple du tp5, et des tableaux de différentes tailles finissent triés
 (même si pour les tableaux de grande taille l’affichage dans le terminal est interminable).
+
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP5 | 7 | 1 | 1 | 1 | | 1 | 1 | 1 | 1 | | |  | | 
+
 ## TP8, Challenge Syracuse
 ---
 Ce TP a été plutôt pratique pour revoir la récursivité car je n'y suis pas habitué.
 Cependant je ne suis pas sûr d'avoir bien compris si la valeur maximale (pour le tableau de memo) doit atteindre 200 millions ou si on doit calculer la hauteur de vol maximale pour les entrées de 1 à 200 millions, j'ai donc mis la valeur du tableau à 200 millions (1ere option).
+
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP8 | 8 |  | 2 | 1 | | 1 | 2 | 1 | 1 | | | | | 
 
 ## TP9, Exercices avec malloc
 ---
@@ -164,6 +181,10 @@ Ce que j‘ai appris : utiliser strcpy pour recopier une chaine de caractère da
 Preuve factuelle : Les valeurs des tableaux copiés sont correctes.
 Valgrind ne renvoie pas de problèmes.
 
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP9 | 10 | 1 | 1 | 1 | | 1 |  | 2 | 1 | 1 | 2 |  | | 
+
 ## TP 10, tri multicritères
 ---
 J'ai peut être visé trop haut avec ce TP, j'ai réussi l'exercice 1 mais pour la fonction principale du 2 je n'y suis pas du tout.
@@ -184,6 +205,10 @@ Je ne sais pas vraiment utiliser les listes chainées, je n’ai pas réussi à 
 “ordered_insertion” qui est la grande partie de l’exercice. Le problème est donc surtout au
 niveau conception.
 
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP10 | 3 | 1 | 1 | 1 | | 0 | | 0 | 0 | 0 | 0 |  | | 
+
 ## Conclusion
 ---
 Je suis toujours assez partagé entre strictement suivre le TP ou alors maximiser l'expérience utilisateur / la fonction du programme, car la "2nde option" prend + de temps et j'aurais pu faire + de TP / projets si j'avais strictement réalisé les TP. Cependant passer + de temps sur les TP et y faire des améliorations qui ne sont pas demandées m'a été utile + d'une fois donc je pense que je continuerai à le faire quand c'est possible.
@@ -193,3 +218,9 @@ Je suis toujours assez partagé entre strictement suivre le TP ou alors maximise
 | Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Total | 44 | 6 | 7 | 7 | 0 | 6 | 5 | 5 | 3 | 2 | 2 | 1 | 0 | 0 | 0 | 
+
+C'est un peu + que les objectfs du semestre 1 pour le total de points.
+J'aurais moins de projets pour le semestre 2 vu que j'ai entammé / fait des projets qui y sont.
+
+
+C'est la fin de ce portfolio pour l'instant, merci d'avoir lu.
