@@ -9,6 +9,8 @@ connaissais déjà des bases rudimentaires du C. J’ai donc fait le TP malloc a
 
 Source d’aide en cas de difficultés : M. Borie, le cours, internet
 
+Vous trouverez le github avec les projets ainsi que ce même document [ici](https://github.com/daovincent/ESIPE/tree/main/C)
+
 ## Table des matières
 [Introduction](#Introduction)
 
@@ -27,6 +29,8 @@ Source d’aide en cas de difficultés : M. Borie, le cours, internet
 [TP9](#TP9-Exercices-avec-malloc)
 
 [TP10](#TP-10-tri-multicritères)
+
+[Total points accumulés](#Total-points-accumulés)
     
 
 ## Les TP réalisés
@@ -77,6 +81,10 @@ Je n’étais pas familier avec les manipulations de fichier (fopen etc).
 Assez rarement, avec l’exécution du programme un caractère spécial s’affiche tout à la fin, mais
 je n’ai pas trouvé d’où venait le problème et je n’ai pas non plus réussi à le reproduire.
 Sinon, le programme fonctionne correctement.
+
+| Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TP2 | 6 | 1 | 1 | 1 | | 1 | 1 | | | | | 1 | | 
 
 ## Projet Deviner un entier secret
 ---
