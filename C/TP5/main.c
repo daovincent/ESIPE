@@ -6,6 +6,7 @@ But : TP
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <limits.h>
 
 /*Fonction pour un input sécurisé, objectif : entier positif non nul*/
 int secureInput(){ 
