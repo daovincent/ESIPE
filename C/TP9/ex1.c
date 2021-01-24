@@ -12,9 +12,7 @@ int sizeTab;
 char buf[1024]; /*char buffer*/
 do{
   printf("Veuillez entrer un entier positif inférieur à 2 000 000 000\n");
-  if(!fgets(buf,1024,stdin)==0) {
-    printf("Ce que vous avez entré n'est pas un entier positif, ou il est trop grand, rééssayez.\n"); /*reading input failed, give up*/
-  }
+  fgets(buf,1024,stdin);
   sizeTab=atoi(buf);
 }while (sizeTab<=0 || sizeTab>=2000000000);
 
