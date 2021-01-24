@@ -27,11 +27,12 @@ int main(int argc, char const *argv[])
     char* remaining;
     /*reset errno to 0 before each call*/
     errno=0;
-    int n=strtol(argv[1], &remaining,10);
-    if ( argc<2 ||argv[1]==NULL){
+   if ( argc<2){
         printf("Il faut entrer un entier positif en argument lors de l'exec. \n");
         return 0;
     }
+    int n=strtol(argv[1], &remaining,10);
+ 
     if (argv[1]==remaining) {
         printf("The first argument doesn't contain a number. Terminating program.\n");
         return 0;
