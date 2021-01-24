@@ -46,10 +46,10 @@ TP 2, TP 3 (en partie), TP 9, une partie du TP 10
 ---
 Ce tp m'a servi de rappel pour des bases de C, que je n'avais pas utilisé depuis très longtemps.
 
-### Ex1 : Makefile présent, make puis ./main (pas de makefile pour les autres exercices / tp)
+### Ex1 :
 Pas de difficultés pour afficher hello world
 
-### Ex2: gcc -Wall -ansi ex2.c - o ex2
+### Ex2:
 Difficultés rencontrées :
 scanf : ne fonctionnait pas correctement avec plusieurs appels consécutifs
 Solution : en ajoutant un espace avant “ %d” dans la fonction. (partie commentée dû à la suite
@@ -76,7 +76,7 @@ Terminer le programme (return 0) en cas de mauvais input est peut être un peu o
 enchainer avec un scanf/gets + passer par la fonction de vérification de saisie (qui n’a pas été
 faite du coup) aurait pu être + efficace.
 
-### Ex3 : gcc -Wall -ansi ex3.c -o ex3
+### Ex3 : 
 Critique réflexive des choix faits :
 Il faut toujours indiquer l’argument dans la ligne de commande avec l’exécution du programme.
 
@@ -105,13 +105,13 @@ J'ai juste ajouté une fonction supplémentaire pour qu'il puisse abandonner.
 ---
 Toujours sur des bases, je n'ai pas fait l'exercice 2 et 3 car je les avait déjà faits en DUT.
 
-### Ex1 : gcc -Wall -ansi ex3.c -o ex3
+### Ex1 :
 Les résultats de calculs de puissances sont corrects.
 Critique réflexive des choix faits :
 Les valeurs sont entrées en dur et non pas en passant par des inputs utilisateur, il faut donc
 modifier le code pour avoir des résultats différents.
 
-### Ex4 : gcc -Wall -ansi ex4.c -o ex4
+### Ex4 : 
 Critique réflexive des choix faits :
 Fonction de saisie sécurisée (entiers non nuls) qui n’était pas demandée
 Problème : si saisie incorrecte, sera quand même ramené à 0
@@ -121,7 +121,7 @@ une fois, pas demandé).
 Pas utilisé de fonction récursive pour la recherche dichotomique
 Ce que j’ai appris : utiliser qsort, malloc pour un tableau simple
 
-### Ex5 : gcc -Wall -ansi ex5.c -o ex5
+### Ex5 :
 Critique réflexive des choix faits :
 Fonctions supplémentaires → swap, création de tableau dynamique, remplissage du tableau
 aléatoire, print du tableau
@@ -137,7 +137,7 @@ sont toutes positives.
 ---
 Fonctions simples pour des tableaux et fonctions pour un tri fusion. la première partie du TP était plutôt simple car j'avais déjà fait certaines parties dans les exercices d'avant juste pour être à l'aise avec mes tests. Je n'avais jamais fait de tri fusion avant.
 
-### Ex1, ex2 et 3 (tous dans le même fichier) : gcc -Wall -ansi main.c -o main
+### Ex1, ex2 et 3 (tout dans le même fichier) : 
 Quelques fonctions que j’ai déjà fait dans les tp d’avant quand ce n’était pas demandé.
 Je remarque qu’il n’est pas possible d’entrer plusieurs valeurs dans le tableau en utilisant
 “espace” entre chaque input, il faut utiliser “entrer” parce que strtol ignore les chaînes de
@@ -164,7 +164,7 @@ Cependant je ne suis pas sûr d'avoir bien compris si la valeur maximale (pour l
 ---
 Valgrind pour montrer que les malloc sont faits correctement, assez pratique.
 
-### EX1 : gcc -Wall -ansi ex1.c -o ex1
+### EX1 :
 Critique réflexive des choix faits :
 Méthode différente de saisie sécurisée en utilisant un do while pour que le programme ne se
 termine pas après une saisie incorrecte. Pas demandé ni nécessaire d’utiliser une méthode
@@ -176,12 +176,13 @@ Ce que j’ai appris :
 Faire une saisie sécurisée différente (fgets + atoi).
 Preuve factuelle : Valgrind me dit que tout est ok et mes saisies fonctionnent correctement.
 
-### Ex2 : gcc -Wall -ansi ex2.c -o ex2
+### Ex2 : 
 Critique réflexive des choix faits :
 Encore une méthode différente de saisie sécurisée (scanf(“%*[^\n]”)).
 Ce que j’ai appris : utiliser malloc sur un tableau 2d
 Preuve factuelle : valgrind me dit que tout a été free et qu’il n’y a pas de problème.
-Ex3 : gcc -Wall -ansi ex3.c -o ex3
+
+### Ex3 : 
 Ce que j‘ai appris : utiliser strcpy pour recopier une chaine de caractère dans un tableau.
 Preuve factuelle : Les valeurs des tableaux copiés sont correctes.
 Valgrind ne renvoie pas de problèmes.
@@ -194,7 +195,7 @@ Valgrind ne renvoie pas de problèmes.
 ---
 J'ai peut être visé trop haut avec ce TP, j'ai réussi l'exercice 1 mais pour la fonction principale du 2 je n'y suis pas du tout.
 
-### Ex1 : gcc -Wall -ansi ex1.c -o ex1
+### Ex1 : 
 Difficultés rencontrées :
 Pas certain de comment faire pour échanger bit par bit les variables
 Ce que j’ai appris : à échanger n’importe quelle variable bit par bit, tant que leur taille est la
@@ -204,7 +205,7 @@ Critique réflexive des choix faits :
 J’utilisais un “while (size--) en tant que boucle mais on m’a signalé que ce n’était pas très clair,
 j’ai donc changé cette partie du code en “while(size>0) { size--; “ .
 
-### Ex2 : gcc -Wall -ansi ex2.c -o ex2
+### Ex2 : 
 Difficultés rencontrées :
 Je ne sais pas vraiment utiliser les listes chainées, je n’ai pas réussi à faire la fonction
 “ordered_insertion” qui est la grande partie de l’exercice. Le problème est donc surtout au
