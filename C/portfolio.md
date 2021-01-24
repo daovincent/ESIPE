@@ -12,11 +12,13 @@ Source d’aide en cas de difficultés : M. Borie, le cours, internet
 ## Table des matières
 [Introduction](#Introduction)
 [Les TP réalisés](#Les TP réalisés :)
-[TP2](#TP2)
-[TP3](#TP3)
-[TP5](#TP5)
-[TP9](#TP9)
-[TP10](#TP10)
+[TP2](#TP2, Premiers programmes)
+[Projet "Deviner un entier secret"](Projet "Deviner un entier secret")
+[TP3](#TP3 : D’autres programmes)
+[TP5](#TP5 Tableaux d’entiers se finissant par –1 (et son main.c))
+[TP8](TP8 : Challenge Syracuse : récursion et mémoïsation (hauteur de vol max pour n <= 200 000 000))
+[TP9](#TP 9 : Exercices avec malloc)
+[TP10](#TP 10 : tri multicritères sur liste chainées de personnes (incomplet))
 
 ## Les TP réalisés : 
 ---
@@ -113,7 +115,7 @@ Ce que j’ai appris : Faire un tri fusion
 Preuve factuelle :
 J’ai un affichage similaire à l’exemple du tp5, et des tableaux de différentes tailles finissent triés
 (même si pour les tableaux de grande taille l’affichage dans le terminal est interminable).
-## TP8
+## TP8 : Challenge Syracuse : récursion et mémoïsation (hauteur de vol max pour n <= 200 000 000)
 ---
 Ce TP a été plutôt pratique pour revoir la récursivité car je n'y suis pas habitué.
 
@@ -164,5 +166,5 @@ Je ne sais pas vraiment utiliser les listes chainées, je n’ai pas réussi à 
 niveau conception.
 
 ## Conclusion
-
+---
 Je suis toujours assez partagé entre strictement suivre le TP ou alors maximiser l'expérience utilisateur / la fonction du programme, car la "2nde option" prend + de temps et j'aurais pu faire + de TP / projets si j'avais strictement réalisé les TP. Cependant
