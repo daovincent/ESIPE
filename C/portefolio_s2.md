@@ -49,15 +49,13 @@ Je n'ai pas fait de tests en profondeur mais je pense avoir réussi le TP sans t
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TP6 | 10 | 1 | 1 | 1 | 1 | 1 | 2 | 1 | 1 | | | 1 | | 
 
-## Projet Deviner un entier secret
+## Projet WordCount
 ---
-L'utilisateur entre un entier positif pour le max du nombre qu'il faudra trouver.
-Ensuite, il essaie de trouver le nombre qui a été généré aléatoirement.
-J'ai juste ajouté une fonction supplémentaire pour qu'il puisse abandonner.
+L'utilisateur doit donner en argument un fichier texte à l'appel du programme, j'ai ajouté un compteur de caractères ainsi qu'un compteur de lignes parce que pourquoi pas. J'ai pu utiliser ce programme en complémentaire pour vérifier mes résultats pour d'autres TP ainsi que dans d'autres matières. Ce projet a donc surtout été utilitaire pour moi, pour éviter d'allumer google et chercher un word count online...
 
 | Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Deviner Entier Secret | 4 | 1 | 1 | 1 | | 1 |  | | | | |  | | 
+| wordcount | 5 | 1 | 1 | 1 | | 1 |  | | | | | 1 | | 
 
 ## TP3, D’autres programmes
 ---
