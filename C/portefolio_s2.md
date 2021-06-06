@@ -107,9 +107,12 @@ J'ai commencé beaucoup de projets en C car les sujets m'intéressaient (shoot'e
 ---
 | Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Total | 56 | 6 | 7 | 7 | 0 | 6 | 5 | 5 | 3 | 2 | 2 | 1 | 0 | 0 | 0 | 
+| Total | 56 | 9 | 6 | 6 | 2 | 6 | 5 | 2 | 6 | 5 | 3 | 5 | 0 | 1 | 0 | 
 
-Mon total de points pour le semestre 2 est de 56, et le total de l'année est de 100. Je suis un peu en dessous des objectifs 2018 (110 points) mais cela m'a permis de constater que ma capacité à résoudre des problèmes me prend plus de temps que ce à quoi je m'attendais. J'ai du coup également passé une partie de mon temps à expliquer comment s'y prendre à d'autres personnes dans la promo pour différents problèmes et ça m'a permis de mieux les comprendre moi même.
+Mon total de points pour le semestre 2 est de 56, et le total de l'année est de 100.
+J'ai donc fourni + de travail qu'au premier semestre. 
+Je suis un peu en dessous des objectifs 2018 (110 points) mais cela m'a permis de constater que ma capacité à résoudre des problèmes me prend plus de temps que ce à quoi je m'attendais. 
+J'ai du coup également passé une partie de mon temps à expliquer comment s'y prendre à d'autres personnes dans la promo pour différents problèmes et ça m'a permis de mieux les comprendre moi même.
 
 
 C'est la fin de ce portfolio pour l'instant, merci d'avoir lu.
