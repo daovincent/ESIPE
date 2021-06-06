@@ -95,7 +95,7 @@ Valgrind pour montrer que les malloc sont faits correctement, assez pratique.
 
 | Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TP9 | 10 | 1 | 1 | 1 | | 1 |  | 2 | 1 | 1 | 2 |  | | 
+| TP12 | 11 | 2 | 1 | 1 | | 1 |  | 1 | 1 | 2 | 1 | 1 | | 
 
 
 ## Conclusion
