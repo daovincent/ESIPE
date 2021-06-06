@@ -42,52 +42,12 @@ TP 6, TP 10, TP 12
 
 ## TP6 backtracking
 ---
+Je n'ai pas fait de tests en profondeur mais je pense avoir réussi le TP sans trop de difficultés.
 
-
-### Ex1 :
-Pas de difficultés pour afficher hello world
-
-### Ex2:
-Difficultés rencontrées :
-scanf : ne fonctionnait pas correctement avec plusieurs appels consécutifs
-Solution : en ajoutant un espace avant “ %d” dans la fonction. (partie commentée dû à la suite
-de l’exercice.
-Saisie sécurisée : en cas de “mauvais input” de la part de l’utilisateur, le programme qui donnait
-des résultats incorrects ou des problèmes.
-Solution : utiliser la variable errno, avec la fonction strtol pour pouvoir discerner les cas
-différents
-→ si l’input ne contient pas de nombres
-→ si l’input a un nombre suivi d’autres caractères, cas dans lequel le chiffre sera pris en compte
-mais pas le reste de la chaine de caractère.
-→ Underflow / Overflow détectés
-Pour chaque erreur, le programme renvoie la nature de l’erreur puis termine le programme.
-
-Ce que j’ai appris :
-Faire une saisie sécurisée qui détecte les différents inputs incorrects.
-Critique réflexive des choix faits :
-La saisie sécurisée n’était pas demandée, du coup j’ai pris du temps en plus pour faire des tests
-avec différentes fonctions (atoi, atol…) et en utilisant gets au lieu de scanf.
-Faire une fonction pour évaluer chaque input aurait été + efficace que de faire un copié collé
-pour les 2 inputs, ce qui n’est pas spécialement dérangeant pour 2 inputs mais aurait pu l’être
-s’il y avait besoin de + d’inputs.
-Terminer le programme (return 0) en cas de mauvais input est peut être un peu overkill,
-enchainer avec un scanf/gets + passer par la fonction de vérification de saisie (qui n’a pas été
-faite du coup) aurait pu être + efficace.
-
-### Ex3 : 
-Critique réflexive des choix faits :
-Il faut toujours indiquer l’argument dans la ligne de commande avec l’exécution du programme.
-
-### Ex5 :
-Difficultés rencontrées :
-Je n’étais pas familier avec les manipulations de fichier (fopen etc).
-Assez rarement, avec l’exécution du programme un caractère spécial s’affiche tout à la fin, mais
-je n’ai pas trouvé d’où venait le problème et je n’ai pas non plus réussi à le reproduire.
-Sinon, le programme fonctionne correctement.
 
 | Projet | Pts | I/0 | Type | Progr | Module | Compil | Récursion | Tableaux | Pointeurs | Structures | Allocation | Fichier | Bit à bit | Fct Pointer | Biblio |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TP2 | 6 | 1 | 1 | 1 | | 1 | 1 | | | | | 1 | | 
+| TP6 | 10 | 1 | 1 | 1 | 1 | 1 | 2 | 1 | 1 | | | 1 | | 
 
 ## Projet Deviner un entier secret
 ---
