@@ -1,4 +1,6 @@
 # Shortest Paths
+**Negative cycles** are **never allowed**, otherwise there would be no "shortest path"
+
 
 ## Dijkstra
 
