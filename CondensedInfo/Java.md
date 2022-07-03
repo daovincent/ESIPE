@@ -19,3 +19,14 @@ public class Collections {
 ```
 
 Source : https://github.com/khenissimehdi/PECS-JAVA
+
+
+## Write your own forEach
+```java
+        public void forEach(Consumer <? super Data<T>> consumer){
+            var index=new Index(size);
+            for(int i=0;i<size;i++) consumer.accept(list.get(i));
+        }
+```
+Here, "Data<T>" represents a record, since we want the forEach to iterate over the elements of our list of Data<T>.
+Consumer -> Super because PECS 
