@@ -30,3 +30,36 @@ Source : https://github.com/khenissimehdi/PECS-JAVA
 ```
 Here, "Data<T>" represents a record, since we want the forEach to iterate over the elements of our list of Data<T>.
 Consumer -> Super because PECS 
+
+  
+## Write your own Iterator 
+  
+First, in order to use the for ( var a : class ) , the "class" you want to iterate over has to be Iterable, so it needs to IMPLEMENT Iterable<The data you want to iterate over>.
+  
+  
+If the structure to iterate over is simple you might be able to do "return data.iterator()", doesn't cost too much time to try...
+  
+  
+Otherwise : 
+```java
+  public Iterator<Data<T>> iterator(){
+            // Here you put useful outside variables accessible here that might be useful IN the iterator...
+            return new Iterator<>() {
+                // Here you put useful variables for your iterator ...
+                private int current; // often useful to know at what index you are
+  
+                @Override
+                public boolean hasNext() {
+                    return current<max; 
+                }
+
+                @Override
+                public Data<T> next() {
+                    if(!hasNext()) throw new NoSuchElementException();
+                    var res=data.get(current);
+                    current++;
+                    return res;
+                }
+            };
+        }
+  ```
