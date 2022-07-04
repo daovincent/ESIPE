@@ -43,23 +43,23 @@ If the structure to iterate over is simple you might be able to do "return data.
 Otherwise : 
 ```java
   public Iterator<Data<T>> iterator(){
-            // Here you put useful outside variables accessible here that might be useful IN the iterator...
-            return new Iterator<>() {
-                // Here you put useful variables for your iterator ...
-                private int current; // often useful to know at what index you are
-  
-                @Override
-                public boolean hasNext() {
-                    return current<max; 
-                }
+      // Here you put useful outside variables accessible here that might be useful IN the iterator...
+      return new Iterator<>() {
+          // Here you put useful variables for your iterator ...
+          private int current; // often useful to know at what index you are
 
-                @Override
-                public Data<T> next() {
-                    if(!hasNext()) throw new NoSuchElementException();
-                    var res=data.get(current);
-                    current++;
-                    return res;
-                }
-            };
-        }
+          @Override
+          public boolean hasNext() {
+              return current<max; 
+          }
+
+          @Override
+          public Data<T> next() {
+              if(!hasNext()) throw new NoSuchElementException();
+              var res=data.get(current);
+              current++;
+              return res;
+          }
+      };
+  }
   ```
