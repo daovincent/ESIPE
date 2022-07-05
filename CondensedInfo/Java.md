@@ -112,7 +112,8 @@ Otherwise :
             return NONNULL;
         }
     };
-}```
+}
+```
 
 ### Spliterator characteristics 
 - ORDERED promises that there is an order. For instance, trySplit is guaranteed to give a prefix of elements.
