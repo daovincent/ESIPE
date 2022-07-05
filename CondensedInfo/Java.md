@@ -117,15 +117,15 @@ Otherwise :
 ```
 
 ### Spliterator characteristics 
-- ORDERED promises that there is an order. For instance, trySplit is guaranteed to give a prefix of elements.
-- DISTINCT a promise that each element in the stream is unique.
-- SORTED a promise that the stream is already sorted.
-- SIZED promises the size of the stream is known. This is not true when a call to iterate generates the stream.
-- NONNULL promises that no elements in the stream are null.
-- IMMUTABLE promises the underlying data will not change.
-- CONCURRENT promises that the underlying data can be modified concurrently. Must not also be IMMUTABLE.
-- SUBSIZED promises that the sizes of splits are known, must also be SIZED.
+- SIZED – if it's capable of returning an exact number of elements with the estimateSize() method
+- SORTED – if it's iterating through a sorted source
+- SUBSIZED – if we split the instance using a trySplit() method and obtain Spliterators that are SIZED as well
+- CONCURRENT – if source can be safely modified concurrently
+- DISTINCT – if for each pair of encountered elements x, y, !x.equals(y)
+- IMMUTABLE – if elements held by source can't be structurally modified
+- NONNULL – if source holds nulls or not
+- ORDERED – if iterating over an ordered sequence
 
 
-source : https://richardstartin.github.io/posts/spliterator-characteristics-and-performance
+Source : https://www.baeldung.com/java-spliterator
 
