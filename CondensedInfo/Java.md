@@ -125,5 +125,7 @@ Otherwise :
 - IMMUTABLE promises the underlying data will not change.
 - CONCURRENT promises that the underlying data can be modified concurrently. Must not also be IMMUTABLE.
 - SUBSIZED promises that the sizes of splits are known, must also be SIZED.
+
+
 source : https://richardstartin.github.io/posts/spliterator-characteristics-and-performance
 
