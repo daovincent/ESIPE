@@ -96,7 +96,7 @@ Otherwise :
             return false;
         }
         // This is the splitting function, here you give the instructions which to follow to separate the iterator into two instances
-        // return numm if you don't want your iterator to be able to split, which makes the use of a spliterator debatable...
+        // return null if you don't want your iterator to be able to split, which makes the use of a spliterator debatable...
         @Override
         public Spliterator<T> trySplit() {
             return null;
