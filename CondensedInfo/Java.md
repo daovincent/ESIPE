@@ -64,3 +64,65 @@ Otherwise :
       };
   }
   ```
+  
+  
+## The one and only Spliterator
+  
+  First, write your function with "return new Spliterator<T>();" and let your IDE show the skeletton of functions to implement.
+  
+
+  ```java
+      public Spliterator<T> splirarator(boolean onlyTagged){
+        T[] copy = (T[]) new Object[size];
+        System.arraycopy(elements,0,copy,0,size);
+        int copyS;
+        if(onlyTagged)
+            copyS=sizeImportant;
+        else copyS=copy.length;
+        int size2=size;
+        return new Spliterator<T>() {
+            private int current; // actual elements returned
+            private int pos; // pos in the array
+            @Override
+            public boolean tryAdvance(Consumer<? super T> action) {
+                Objects.requireNonNull(action);
+                if(current<copyS){
+                    try{
+                        if(onlyTagged){
+                            while(pos<size2){
+                                if(predicate.test(copy[pos])){
+                                    action.accept(copy[pos]);
+                                    current++;
+                                }
+                                pos++;
+                            }
+                        }
+                        else {
+                            action.accept(copy[pos++]);
+                            current++;
+                        }
+                    } catch (IllegalStateException e) {
+                        throw new ConcurrentModificationException(e);
+                    }
+                    return true;
+                }
+                return false;
+            }
+
+            @Override
+            public Spliterator<T> trySplit() {
+                return null;
+            }
+
+            @Override
+            public long estimateSize() {
+                return copyS-current;
+            }
+
+            @Override
+            public int characteristics() {
+                return NONNULL;
+            }
+        };
+    }```
+
