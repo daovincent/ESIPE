@@ -73,34 +73,21 @@ Otherwise :
 
   ```java
       public Spliterator<T> splirarator(boolean onlyTagged){
+        // Just like the Iterator, place copy of useful variables here (copy in order to have a snapshot instead of real time data)
         T[] copy = (T[]) new Object[size];
-        System.arraycopy(elements,0,copy,0,size);
-        int copyS;
-        if(onlyTagged)
-            copyS=sizeImportant;
-        else copyS=copy.length;
-        int size2=size;
+        System.arraycopy(elements,0,copy,0,size); // Defensive copy of an array
+        int copyS=size;
         return new Spliterator<T>() {
-            private int current; // actual elements returned
+            // Other useful variables ...
             private int pos; // pos in the array
+            
+            // Inside the try, you do pretty much the same as an Iterator
             @Override
             public boolean tryAdvance(Consumer<? super T> action) {
                 Objects.requireNonNull(action);
                 if(current<copyS){
                     try{
-                        if(onlyTagged){
-                            while(pos<size2){
-                                if(predicate.test(copy[pos])){
-                                    action.accept(copy[pos]);
-                                    current++;
-                                }
-                                pos++;
-                            }
-                        }
-                        else {
-                            action.accept(copy[pos++]);
-                            current++;
-                        }
+                        action.accept(copy[pos++]);
                     } catch (IllegalStateException e) {
                         throw new ConcurrentModificationException(e);
                     }
@@ -108,21 +95,32 @@ Otherwise :
                 }
                 return false;
             }
-
+            // This is the splitting function, here you give the instructions which to follow to separate the iterator into two instances
             @Override
             public Spliterator<T> trySplit() {
                 return null;
             }
-
-            @Override
+            
+            // We have hasNext() at home
+            @Override 
             public long estimateSize() {
                 return copyS-current;
             }
-
+            // Here you can specify characteristics of the spliterator 
             @Override
             public int characteristics() {
                 return NONNULL;
             }
         };
     }```
+
+### Spliterator characteristics 
+- ORDERED promises that there is an order. For instance, trySplit is guaranteed to give a prefix of elements.
+- DISTINCT a promise that each element in the stream is unique.
+- SORTED a promise that the stream is already sorted.
+- SIZED promises the size of the stream is known. This is not true when a call to iterate generates the stream.
+- NONNULL promises that no elements in the stream are null.
+- IMMUTABLE promises the underlying data will not change.
+- CONCURRENT promises that the underlying data can be modified concurrently. Must not also be IMMUTABLE.
+- SUBSIZED promises that the sizes of splits are known, must also be SIZED.
 
