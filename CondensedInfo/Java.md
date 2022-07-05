@@ -72,47 +72,47 @@ Otherwise :
   
 
   ```java
-      public Spliterator<T> splirarator(boolean onlyTagged){
-        // Just like the Iterator, place copy of useful variables here (copy in order to have a snapshot instead of real time data)
-        T[] copy = (T[]) new Object[size];
-        System.arraycopy(elements,0,copy,0,size); // Defensive copy of an array
-        int copyS=size;
-        return new Spliterator<T>() {
-            // Other useful variables ...
-            private int pos; // pos in the array
-            
-            // Inside the try, you do pretty much the same as an Iterator
-            @Override
-            public boolean tryAdvance(Consumer<? super T> action) {
-                Objects.requireNonNull(action);
-                if(current<copyS){
-                    try{
-                        action.accept(copy[pos++]);
-                    } catch (IllegalStateException e) {
-                        throw new ConcurrentModificationException(e);
-                    }
-                    return true;
+  public Spliterator<T> splirarator(boolean onlyTagged){
+    // Just like the Iterator, place copy of useful variables here (copy in order to have a snapshot instead of real time data)
+    T[] copy = (T[]) new Object[size];
+    System.arraycopy(elements,0,copy,0,size); // Defensive copy of an array
+    int copyS=size;
+    return new Spliterator<T>() {
+        // Other useful variables ...
+        private int pos; // pos in the array
+
+        // Inside the try, you do pretty much the same as an Iterator
+        @Override
+        public boolean tryAdvance(Consumer<? super T> action) {
+            Objects.requireNonNull(action);
+            if(current<copyS){
+                try{
+                    action.accept(copy[pos++]);
+                } catch (IllegalStateException e) {
+                    throw new ConcurrentModificationException(e);
                 }
-                return false;
+                return true;
             }
-            // This is the splitting function, here you give the instructions which to follow to separate the iterator into two instances
-            @Override
-            public Spliterator<T> trySplit() {
-                return null;
-            }
-            
-            // We have hasNext() at home
-            @Override 
-            public long estimateSize() {
-                return copyS-current;
-            }
-            // Here you can specify characteristics of the spliterator 
-            @Override
-            public int characteristics() {
-                return NONNULL;
-            }
-        };
-    }```
+            return false;
+        }
+        // This is the splitting function, here you give the instructions which to follow to separate the iterator into two instances
+        @Override
+        public Spliterator<T> trySplit() {
+            return null;
+        }
+
+        // We have hasNext() at home
+        @Override 
+        public long estimateSize() {
+            return copyS-current;
+        }
+        // Here you can specify characteristics of the spliterator 
+        @Override
+        public int characteristics() {
+            return NONNULL;
+        }
+    };
+}```
 
 ### Spliterator characteristics 
 - ORDERED promises that there is an order. For instance, trySplit is guaranteed to give a prefix of elements.
