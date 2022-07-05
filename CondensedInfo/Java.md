@@ -45,7 +45,9 @@ Otherwise :
       // Here you put useful outside variables accessible here that might be useful IN the iterator...
       return new Iterator<>() {
           // Here you put useful variables for your iterator ...
-          private int current; // often useful to know at what index you are
+          // You can also put copies of your class variables, in order for the iterator to only see a snapshot of the class
+  
+          private int current; // often useful to know at what index you are  
 
           @Override
           public boolean hasNext() {
