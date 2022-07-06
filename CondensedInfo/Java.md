@@ -193,6 +193,10 @@ There's only 2 methods to implement and they're pretty straightforward. Since it
 ```java
 private T[] array = (T[]) new Object[size]; // You know what you want it to be anyway so you can cast...
 ```
+Tell the compilator that it's not an unsafe cast : 
+```java
+@SuppressWarnings("unchecked")
+```
 
 ### Functional Interfaces : 
 - https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
