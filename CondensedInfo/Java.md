@@ -151,6 +151,14 @@ Otherwise :
 Source : https://www.baeldung.com/java-spliterator
 
 
+## How to stream a Spliterator 
+
+```java
+return StreamSupport.stream(split(0,list.size(),list) , false);
+```
+list is your defensive copy
+arg at the end is if you want your stream to be parallel
+
 ## Don't want a defensive copy for your lists ? No problem
 
 Using a defensive copy means making a copy. It is often an unmodifiable copy but still, it's not efficient.
@@ -177,3 +185,6 @@ public List<U> valuesFor(Object i) { // Using object in order to check no matter
 }
 ```
 There's only 2 methods to implement and they're pretty straightforward. Since it's a view the size won't change which makes this possible.
+
+
+
