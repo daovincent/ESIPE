@@ -202,3 +202,5 @@ Tell the compilator that it's not an unsafe cast :
 - https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
 - http://www-igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/2-lambda.pdf ( + stream )
 
+### TrySplit
+- http://www-igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/18-Stream-Optional.pdf
