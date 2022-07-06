@@ -187,4 +187,9 @@ public List<U> valuesFor(Object i) { // Using object in order to check no matter
 There's only 2 methods to implement and they're pretty straightforward. Since it's a view the size won't change which makes this possible.
 
 
+## Tips & Tricks
 
+Create an array of generic type T : 
+```java
+private T[] array = (T[]) new Object[size]; // You know what you want it o be anyway so you can cast...
+```
