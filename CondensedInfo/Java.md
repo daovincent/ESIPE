@@ -189,7 +189,12 @@ There's only 2 methods to implement and they're pretty straightforward. Since it
 
 ## Tips & Tricks
 
-Create an array of generic type T : 
+### Create an array of generic type T : 
 ```java
 private T[] array = (T[]) new Object[size]; // You know what you want it to be anyway so you can cast...
 ```
+
+### Functional Interfaces : 
+https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
+http://www-igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/2-lambda.pdf ( + stream )
+
