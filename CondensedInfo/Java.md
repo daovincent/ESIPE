@@ -118,7 +118,7 @@ Otherwise :
                 if (middle == i) {
                     return null;
                 }
-                var spliterator = createSpliterator(i, middle, array);
+                var spliterator = spliterator(i, middle, copy);
                 i = middle;
                 return spliterator;
         }
