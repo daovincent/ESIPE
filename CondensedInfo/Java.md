@@ -191,5 +191,5 @@ There's only 2 methods to implement and they're pretty straightforward. Since it
 
 Create an array of generic type T : 
 ```java
-private T[] array = (T[]) new Object[size]; // You know what you want it o be anyway so you can cast...
+private T[] array = (T[]) new Object[size]; // You know what you want it to be anyway so you can cast...
 ```
