@@ -22,6 +22,7 @@ Source : https://github.com/khenissimehdi/PECS-JAVA
 
 
 ## Write your own forEach
+### Case of a simple Consumer : 
 ```java
         public void forEach(Consumer <? super Data<T>> consumer){
             for(int i=0;i<size;i++) consumer.accept(list.get(i));
@@ -31,6 +32,24 @@ Here, "Data<T>" represents a record, since we want the forEach to iterate over t
 Consumer -> Super because PECS 
 
   
+### Case of a BiConsumer
+  ```java
+  public void forEach(BiConsumer<? super T,? super U> cons ) {
+        if(cons==null) throw new NullPointerException();
+        data.entrySet()
+                .forEach(e->e.getValue()
+                        .forEach(a-> cons.accept(e.getKey(),a)));
+    }
+```
+The data we go through is a LinkedHashMap<T, ArrayList<U>>.
+
+
+BiConsumer has to be told ? super ... 2 times in order to be able to get the 2 args from a lambda 
+
+
+Super because PECS
+  
+
 ## Write your own Iterator 
   
 First, in order to use the for ( var a : class ) , the "class" you want to iterate over has to be Iterable, so it needs to IMPLEMENT Iterable<The data you want to iterate over>.
@@ -72,20 +91,16 @@ Otherwise :
   
 
   ```java
-  public Spliterator<T> splirarator(boolean onlyTagged){
-    // Just like the Iterator, place copy of useful variables here (copy in order to have a snapshot instead of real time data)
-    T[] copy = (T[]) new Object[size];
-    System.arraycopy(elements,0,copy,0,size); // Defensive copy of an array
-    int copyS=size;
+  public Spliterator<T> splirarator(int start, int end,T[] copy){
     return new Spliterator<T>() {
         // Other useful variables ...
-        private int pos; // pos in the array
+        private int i=start; // pos in the array
 
         // Inside the try, you do pretty much the same as an Iterator
         @Override
         public boolean tryAdvance(Consumer<? super T> action) {
             Objects.requireNonNull(action);
-            if(current<copyS){
+            if(i<end){
                 try{
                     action.accept(copy[pos++]);
                 } catch (IllegalStateException e) {
@@ -99,18 +114,24 @@ Otherwise :
         // return null if you don't want your iterator to be able to split, which makes the use of a spliterator debatable...
         @Override
         public Spliterator<T> trySplit() {
-            return null;
+             var middle = (i + end) >> 1;
+                if (middle == i) {
+                    return null;
+                }
+                var spliterator = createSpliterator(i, middle, array);
+                i = middle;
+                return spliterator;
         }
 
         // We have hasNext() at home
         @Override 
         public long estimateSize() {
-            return copyS-current;
+            return end-i;
         }
         // Here you can specify characteristics of the spliterator 
         @Override
         public int characteristics() {
-            return NONNULL;
+            return NONNULL | SIZED | SUBSIZED;
         }
     };
 }
