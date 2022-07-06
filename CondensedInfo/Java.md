@@ -157,7 +157,8 @@ Using a defensive copy means making a copy. It is often an unmodifiable copy but
 
 In order to reach "peak" efficiency, it is possible to create a class which extends AbstractList and implements  RandomAccess (in order to have constant RandomAccess)
 ```java
-public List<U> valuesFor(Object i) { // Using object in order to check no matter the type of the key, if it's wrong it won't output anything anyways
+public List<U> valuesFor(Object i) { // Using object in order to check no matter the type of the key 
+    // if it's the wrong type, it won't output anything anyways
     if ( i == null ) throw new NullPointerException();
     if(!data.containsKey((T)i)) return new ArrayList<>();
     class localView extends AbstractList<U> implements RandomAccess{
