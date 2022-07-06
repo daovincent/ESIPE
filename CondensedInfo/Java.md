@@ -138,7 +138,7 @@ Otherwise :
 ```
 
 ### Spliterator characteristics 
-- SIZED – if it's capable of returning an exact number of elements with the estimateSize() method
+- SIZED – if it's capable of returning an exact number of elements with the estimateSize() method  ( NECESSARY if you want to SPLIT)
 - SORTED – if it's iterating through a sorted source
 - SUBSIZED – if we split the instance using a trySplit() method and obtain Spliterators that are SIZED as well
 - CONCURRENT – if source can be safely modified concurrently
