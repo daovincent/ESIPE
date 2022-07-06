@@ -195,6 +195,6 @@ private T[] array = (T[]) new Object[size]; // You know what you want it to be a
 ```
 
 ### Functional Interfaces : 
-https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
-http://www-igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/2-lambda.pdf ( + stream )
+- https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
+- http://www-igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/2-lambda.pdf ( + stream )
 
