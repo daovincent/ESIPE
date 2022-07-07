@@ -157,6 +157,7 @@ Source : https://www.baeldung.com/java-spliterator
 return StreamSupport.stream(split(0,list.size(),list) , false);
 ```
 list is your defensive copy
+
 arg at the end is if you want your stream to be parallel
 
 ## Don't want a defensive copy for your lists ? No problem
