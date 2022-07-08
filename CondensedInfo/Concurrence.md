@@ -102,3 +102,18 @@ It has 5 parameters :
   - unit ( time unit for inactivity )
   - BlockingQueue<Runnable> workQueue ( queue to stock tasks in case all worker threads are busy )
 
+### Example
+```java
+var executorService = Executors.newFixedThreadPool(2);
+var callables = new ArrayList<Callable<Integer>>();
+IntStream.range(1, 100).forEach(i -> callables.add(() -> bigComputation(i)));
+var futures = executorService.invokeAll(callables);
+
+try {
+for (var future : futures){
+  System.out.println(future.get());
+}
+} catch (ExecutionException e) {
+throw new AssertionError(e);
+}
+```
