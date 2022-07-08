@@ -75,5 +75,30 @@ for (int i = 0; i < 2; i++) {
 ```
 
 ## Executor Service
-"I'm too lazy to write 'new Thread(()->...) so I use this instead" - Someone I know
+"I'm too lazy to write 'new Thread(()->...) so I use this instead" - K. M.
+
+Thread.start is not efficient (slow) and it's difficult to "get" a value computed by a thread.
+
+With Executor Service, we can reuse threads for multiple tasks.
+
+
+Tasks become "Callable<T>" and the result is a "Future<T>"
+  
+### Construct a ExecutorService
+```java
+  Executors.newFixedThreadPool(int poolSize) // > poolsize threads which won't stop
+  Executors.newCachedThreadPool() // > As much threads as needed, tries to reuse them and stops inactive threads after 1 min 
+  Executors.newSingleThreadPool() // > As the name suggests : single thread which won't stop
+```
+In these 3 cases, the BlockingQueue used is not limited.
+  
+### ThreadPoolExecutor
+Same as ExecutorService but you can customize it way more to suit your liking.
+
+It has 5 parameters : 
+  - corePoolSize
+  - maximumPoolSize 
+  - keepAliveTime 
+  - unit ( time unit for inactivity )
+  - BlockingQueue<Runnable> workQueue ( queue to stock tasks in case all worker threads are busy )
 
