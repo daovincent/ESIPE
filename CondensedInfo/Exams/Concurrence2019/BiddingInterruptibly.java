@@ -1,107 +1,100 @@
 import java.nio.channels.AsynchronousCloseException;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 public class BiddingInterruptibly {
-    private final int nbParcitipants;
-    private final HashMap<Thread,Integer> bids=new HashMap<>();
+    private final int nbParticipants;
+    private final LinkedHashMap<Thread,Integer> bids=new LinkedHashMap<>();
     private final ArrayList<Thread> threads=new ArrayList<>();
-    private final Object lock = new Object();
     private Thread winner;
-    private boolean closed=false;
+    private final Object lock=new Object();
+    private boolean closed;
 
-    public void close(){
-        synchronized (lock){
-            closed=true;
-            System.out.println("Bidding closed");
-            threads.forEach(Thread::interrupt);
-            lock.notifyAll();
-        }
+    public BiddingInterruptibly(int nbParticipants) {
+        this.nbParticipants = nbParticipants;
     }
-
-    public BiddingInterruptibly(int nbParcitipants) {
-        synchronized (lock){
-            this.nbParcitipants = nbParcitipants;
-        }
-    }
-
-    public boolean registerAndWait() throws AsynchronousCloseException {
+    public boolean registerAndWait() throws InterruptedException, AsynchronousCloseException {
         synchronized (lock){
             if(closed) throw new IllegalStateException();
-
-            if(nbParcitipants==threads.size())
+            var current=Thread.currentThread();
+            if(threads.size()>=nbParticipants)
                 return false;
-            threads.add(Thread.currentThread());
-            System.out.println(Thread.currentThread()+" registered ! ");
-            if(threads.size()==nbParcitipants) lock.notifyAll();
-
-            while(threads.size() != nbParcitipants) {
+            threads.add(current);
+            if(threads.size()==nbParticipants)
+                lock.notifyAll();
+            while(threads.size()<nbParticipants) {
                 try {
+                    if (closed) throw new AsynchronousCloseException();
                     lock.wait();
-                } catch (InterruptedException e) {
-                    throw new AsynchronousCloseException();
+                }catch (InterruptedException e){
+                    threads.remove(current);
+                    throw new InterruptedException();
                 }
             }
             return true;
         }
     }
-    public Thread bid(int value) throws InterruptedException {
-        synchronized (lock){
-            if(!threads.contains(Thread.currentThread()) && bids.get(Thread.currentThread())!=null)
-                throw new IllegalStateException("Illegal thread");
-
-            bids.put(Thread.currentThread(),value);
-            if (bids.size()==nbParcitipants) {
-                winner = bids.entrySet().stream().max(Comparator.comparingInt(e -> e.getValue())).get().getKey();
+    public Thread bid(int value) throws InterruptedException, AsynchronousCloseException {
+        synchronized (lock) {
+            if(closed) throw new IllegalStateException();
+            var current=Thread.currentThread();
+            if (!threads.contains(current) || bids.containsKey(current))
+                throw new IllegalStateException();
+            bids.put(current,value);
+            if(bids.size()==nbParticipants)
                 lock.notifyAll();
-            }
-            while(bids.size()!=nbParcitipants) {
+            while(bids.size()<nbParticipants) {
                 try {
+                    if (closed) throw new AsynchronousCloseException();
                     lock.wait();
-                } catch (InterruptedException e) {
+                }catch (InterruptedException e){
                     close();
                     throw new InterruptedException();
                 }
             }
-            return winner;
+            return bids.entrySet().stream().max(Comparator.comparing(Map.Entry::getValue)).get().getKey();
+        }
+    }
+    public void close(){
+        synchronized (lock){
+            closed=true;
+            lock.notifyAll();
         }
     }
 
+
     public static void main(String[] args) throws InterruptedException {
         var bidding=new BiddingInterruptibly(5);
-        var threads=new Thread[5];
-        IntStream.range(0,5).forEach(j->{
-            threads[j]=new Thread(() -> {
-
+        var threads=new ArrayList<Thread>();
+        IntStream.range(0,5).forEach(i->{
+            var t=new Thread(()->{
                 try {
-                    if(!bidding.registerAndWait()) {
-                        System.out.println(Thread.currentThread().getName() + " not bidding");
+                    if(!bidding.registerAndWait()){
+                        System.out.println(Thread.currentThread().getName()+ " not bidding");
                         return;
                     }
-                } catch (AsynchronousCloseException e) {
-                    System.out.println(Thread.currentThread().getName() + " registration closed");
-                    return;
-                }
-                var bid=(int) (Math.random()*10+1);
-
-                try {
-                    if(j==4) Thread.sleep(10000);
-                    if(Thread.currentThread().equals(bidding.bid(bid)))
-                        System.out.println(Thread.currentThread().getName()+" bid = "+bid + " wins");
-                    else System.out.println(Thread.currentThread().getName()+" bid = "+bid + " loses");
+                    var bid=(int) (Math.random() * 10) +1;
+                    if(i==4) Thread.sleep(5000);
+                    if(bidding.bid(bid).equals(Thread.currentThread()))
+                        System.out.println(Thread.currentThread().getName()+ " (bid = "+ bid + " ) won.");
+                    else
+                        System.out.println(Thread.currentThread().getName()+ " (bid = "+ bid + " ) lost.");
                 } catch (InterruptedException e) {
-                    System.out.println(Thread.currentThread().getName() + " bidding closed");
-                    return;
+                    System.out.println(Thread.currentThread().getName()+" was interrupted");
+                }catch (AsynchronousCloseException e){
+                    System.out.println("Bidding was closed ...");
+                }catch(IllegalStateException e){
+                    System.out.println(Thread.currentThread().getName() + " Tried to register / bid but the bidding was already closed...");
                 }
-
             });
-            threads[j].start();
+            threads.add(t);
+            t.start();
         });
-
+        Thread.sleep(2000);
 //        bidding.close();
-        Thread.sleep(5000);
-        threads[3].interrupt();
+        threads.get(3).interrupt();
     }
 }
