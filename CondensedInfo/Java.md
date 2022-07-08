@@ -198,6 +198,15 @@ Tell the compilator that it's not an unsafe cast :
 ```java
 @SuppressWarnings("unchecked")
 ```
+If you want a better scope of the supper warnings do like this 
+```java
+private final T[] larr;
+public MyClass() {
+    @SuppressWarnings("unchecked")
+    var arr = (T[]) new Object[size];
+    this.larr = arr;
+}
+```
 
 ### Functional Interfaces : 
 - https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/function/package-summary.html
