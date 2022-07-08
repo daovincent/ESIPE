@@ -110,10 +110,10 @@ IntStream.range(1, 100).forEach(i -> callables.add(() -> bigComputation(i)));
 var futures = executorService.invokeAll(callables);
 
 try {
-for (var future : futures){
-  System.out.println(future.get());
-}
+  for (var future : futures){
+    System.out.println(future.get());
+  }
 } catch (ExecutionException e) {
-throw new AssertionError(e);
+  throw new AssertionError(e);
 }
 ```
