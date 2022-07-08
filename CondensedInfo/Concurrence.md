@@ -1,6 +1,8 @@
 # Concurrence 
 Sources : Everything more or less comes from https://igm.univ-mlv.fr/coursconcurrence
 
+In other words, this is info from the course, but in a "condensed way"
+
 ## Synchronized
 This makes the content of the block an "atomic operation". 
 ```java
