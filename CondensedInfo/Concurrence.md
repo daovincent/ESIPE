@@ -42,7 +42,7 @@ Multiple threads that produce data, other threads that manages said data, a bloc
 - SynchronousQueue > Single element at the time, doesn't stock it and we can't iterate over it
 
 ### Methods to use :
-![BlockingQueueMethods](/assets/CondensedInfo/BlockingQueueFunctions.png)
+![BlockingQueueMethods](/CondensedInfo/assets/BlockingQueueFunctions.png)
 In Producer/ Consumer, using methods that throw exceptions is a no-go
 
 ### Example
