@@ -91,40 +91,50 @@ public class TaggedBuffer<T> {
     }
 
     public List<T> asTaggedList() {
-        return Arrays.stream(elements).filter(e -> e != null).filter(predicate).toList();
+        class View extends AbstractList<T> implements RandomAccess{
+            private final List<T> array=Arrays.stream(elements).filter(e -> e != null).filter(predicate).toList();
+            @Override
+            public T get(int index) {
+                return array.get(index);
+            }
+            @Override
+            public int size() {
+                return array.size();
+            }
+        }
+        return new View();
     }
 
-    public Spliterator<T> splirarator(int start, int end, T[] copy, boolean onlyTagged) {
-        return new Spliterator<T>() {
-            int i = start;
 
+    public Stream<T> stream(boolean onlyTagged) {
+        Predicate<? super T> predicate = onlyTagged? this.predicate:__->true;
+        class TaggedSpliterator implements Spliterator<T> {
+            private int i;
+            private int end;
+            TaggedSpliterator(int index, int end ) {
+                this.i = index;
+                this.end = end;
+            }
             @Override
             public boolean tryAdvance(Consumer<? super T> action) {
                 Objects.requireNonNull(action);
-                if (i < end) {
-                    try {
-                        if (onlyTagged) {
-                            while (i < end) {
-                                if (predicate.test(copy[i])) action.accept(copy[i]);
-                                i++;
-                            }
-                        } else action.accept(copy[i++]);
-
-                    } catch (IllegalStateException e) {
-                        throw new ConcurrentModificationException(e);
+                for(; i< end;) {
+                    var element = elements[i++];
+                    if(predicate.test(element)) {
+                        action.accept(element);
+                        return true;
                     }
-                    return true;
                 }
                 return false;
             }
 
             @Override
             public Spliterator<T> trySplit() {
-                var middle = (i + end) >> 1;
+                var middle = (i + end) >>> 1;
                 if (middle == i) {
                     return null;
                 }
-                var spliterator = splirarator(i, middle, copy, onlyTagged);
+                var spliterator = new TaggedSpliterator(i,middle);
                 i = middle;
                 return spliterator;
             }
@@ -136,15 +146,11 @@ public class TaggedBuffer<T> {
 
             @Override
             public int characteristics() {
-                return NONNULL | SIZED | SUBSIZED;
+                return ORDERED | NONNULL | (onlyTagged? 0:SIZED|SUBSIZED);
             }
-        };
-    }
+        }
 
-    public Stream<T> stream(boolean onlyTagged) {
-        T[] copy = (T[]) new Object[size];
-        System.arraycopy(elements, 0, copy, 0, size);
-        return StreamSupport.stream(splirarator(0,size,copy,onlyTagged), false);
+        return StreamSupport.stream(new TaggedSpliterator(0, size), false);
     }
 
 
