@@ -1,3 +1,3 @@
 - Subject : [Regex_Subject.pdf](Regex_Subject.pdf)
-- Answers - PDF : [PDF](regex_exam.pdf)
-- Answers - DOCX (Download) : [DOCX](regex_exam.docx)
+- Answers - [PDF](regex_exam.pdf)
+- Answers - [DOCX (Download)](regex_exam.docx)
