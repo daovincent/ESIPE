@@ -1,0 +1,554 @@
+
+<!-- saved from url=(0072)https://www-igm.univ-mlv.fr/ens/Master/M1/2022-2023/JavaAvance/table.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:umlv="http://www.umlv.fr/2005/tipi" lang="fr" xml:lang="fr" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+<title>TP Noté de Java Avancé - Novembre 2022</title><link rel="stylesheet" type="text/css" href="./TP Noté de Java Avancé - Novembre 2022_files/stylesheet.css" media="screen"><style class="darkreader darkreader--cors" media="screen">#jsMath_Warning {display: none} 
+
+body{
+    font: 80% Verdana, sans-serif;
+    background-color: #EDE9E6;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    overflow: -moz-scrollbars-vertical;
+}
+
+div.conteneur{
+   margin: 1em auto 1em auto;
+   width: 80%;
+   border: 1px solid #C4C4C4;
+   background-color: white;
+   text-align : justify;
+}
+
+div.contenu{
+   margin: 1em 1em 1em 1em;
+}
+
+A
+{ 
+color: #663399; 
+text-decoration: none;
+font-weight: bold;
+}
+
+
+H1
+{
+  font-size: 180%; 
+  color: #FF9900;
+}
+
+H1.subtitle
+{
+  font-size: 180%;
+  color: #FF9900;
+}
+
+H2
+{ 
+  font-size: 180%;
+  color: #993333;
+}
+
+H3
+{
+  font-size: 170%;
+  color: #999966;
+}
+
+H4
+{
+  font-size: 160%;
+  font-weight: bold;
+  color: #669999;
+}
+
+div.answer {
+margin: 1em 0em 0em 0em;
+}
+
+div.answercontent {
+margin: 1em 1em 1em 1em;
+}
+
+div.team {
+border: 3px solid #999966;
+}
+
+div.teamcontent {
+margin: 1em 1em 1em 1em;
+}
+
+ul {
+    list-style-image: url('http://igm.univ-mlv.fr/ens/resources/folder_icon.gif');
+}
+
+ol {
+    list-style-image: none;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+
+
+pre tt{
+font-size:120%;
+}
+
+tt{
+font-size:120%;
+}
+
+pre{
+	font-size:120%;
+	padding: 1em; 
+	border : 1px solid #663399;
+}</style><style class="darkreader darkreader--sync" media="screen"></style><link rel="stylesheet" type="text/css" href="./TP Noté de Java Avancé - Novembre 2022_files/printstylesheet.css" media="print"><link rel="stylesheet" type="text/css" href="./TP Noté de Java Avancé - Novembre 2022_files/sh_ide-eclipse.css"><style class="darkreader darkreader--cors" media="screen">span.c { color: #408080; font-style: italic } 
+span.err { border: 1px solid #FF0000 } 
+span.k { color: #89b405; font-weight: bold } 
+span.o { color: #666666 } 
+span.cm { color: #408080; font-style: italic } 
+span.cp { color: #BC7A00 } 
+span.c1 { color: #408080; font-style: italic } 
+span.cs { color: #408080; font-style: italic } 
+span.gd { color: #A00000 } 
+span.ge { font-style: italic } 
+span.gr { color: #FF0000 } 
+span.gh { color: #000080; font-weight: bold } 
+span.gi { color: #00A000 } 
+span.go { color: #808080 } 
+span.gp { color: #000080; font-weight: bold } 
+span.gs { font-weight: bold } 
+span.gu { color: #800080; font-weight: bold } 
+span.gt { color: #0040D0 } 
+span.kc { color: #89b405; font-weight: bold } 
+span.kd { color: #89b405; font-weight: bold } 
+span.kp { color: #89b405 } 
+span.kr { color: #89b405; font-weight: bold } 
+span.kt { color: #89b405; font-weight: bold } 
+span.m { color: #666666 } 
+span.s { color: #BA2121 } 
+span.na { color: #7D9029 } 
+span.nb { color: #89b405 } 
+span.nc { color: #ff9000; font-weight: bold } 
+span.no { color: #880000 } 
+span.nd { color: #AA22FF } 
+span.ni { color: #999999; font-weight: bold } 
+span.ne { color: #D2413A; font-weight: bold } 
+span.nf { color: #ff9000 } 
+span.nl { color: #A0A000 } 
+span.nn { color: #ff9000; font-weight: bold } 
+span.nt { color: #89b405; font-weight: bold } 
+span.nv { color: #19177C } 
+span.ow { color: #AA22FF; font-weight: bold } 
+span.w { color: #bbbbbb } 
+span.mf { color: #666666 } 
+span.mh { color: #666666 } 
+span.mi { color: #666666 } 
+span.mo { color: #666666 } 
+span.sb { color: #BA2121 } 
+span.sc { color: #BA2121 } 
+span.sd { color: #BA2121; font-style: italic } 
+span.s2 { color: #BA2121 } 
+span.se { color: #BB6622; font-weight: bold } 
+span.sh { color: #BA2121 } 
+span.si { color: #BB6688; font-weight: bold } 
+span.sx { color: #89b405 } 
+span.sr { color: #BB6688 } 
+span.s1 { color: #BA2121 } 
+span.ss { color: #19177C } 
+span.bp { color: #89b405 } 
+span.vc { color: #19177C } 
+span.vg { color: #19177C } 
+span.vi { color: #19177C } 
+span.il { color: #666666 }</style><style class="darkreader darkreader--sync" media="screen"></style><script type="text/javascript">
+	      if(document.location.href.indexOf('http://igm/',0)!=-1){
+	              document.location.href=document.location.href.replace(/.univ-mlv.fr/,'').replace(/http:\/\/(igm|www-igm)/,'http://igm.univ-mlv.fr');
+		      }
+	      if(document.location.href.indexOf('http://www-igm/',0)!=-1){
+		                            document.location.href=document.location.href.replace(/.univ-mlv.fr/,'').replace(/http:\/\/(igm|www-igm)/,'http://igm.univ-mlv.fr');
+					                          }
+		function viewPDF(){
+			window.print();
+		}
+			
+		function myswitch(){
+		if(document.location.href.indexOf('index')>-1){
+			document.location.href= document.location.href.replace(/ens/,'ens/private').replace('http://','https://');
+		}else{
+		document.location.href= document.location.href.replace(/ens/,'ens/private').replace(/.php/,'_cor.php').replace('http://','https://');
+		}	
+		}
+	</script><meta name="darkreader" content="4ca022099a734cc9a038ce3ea509dc21"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}</style></head><body><div class="conteneur"><div class="contenu"><span style="float:right;" class="noprint"><div class="noprint"><table><tbody><tr><td><a href="javascript:myswitch();" style="text-decoration:none"><img src="./TP Noté de Java Avancé - Novembre 2022_files/lock_icon.gif" class="noprint" align="middle"></a></td></tr></tbody></table></div></span><span style="text-align:left;"><a>::</a><a href="https://www-igm.univ-mlv.fr/ens/index.php"> Enseignements </a>::<a href="https://www-igm.univ-mlv.fr/ens/Master/index.php"> Master </a>::<a href="https://www-igm.univ-mlv.fr/ens/Master/M1/index.php"> M1 </a>::<a href="https://www-igm.univ-mlv.fr/ens/Master/M1/2022-2023/index.php"> 2022-2023 </a>::<a href="https://www-igm.univ-mlv.fr/ens/Master/M1/2022-2023/JavaAvance/index.php"> Java Avancé </a>::</span><hr noshade="" size="1"><table><tbody><tr><td valign="middle"><img class="print" src="./TP Noté de Java Avancé - Novembre 2022_files/mlv.png" alt="[LOGO]"></td><td style="vertical-align : middle;"><h1>TP Noté de Java Avancé - Novembre 2022</h1></td></tr></tbody></table><hr>
+ 
+
+ <div xmlns="">
+  Le but de ce TP noté est d'implanter une classe <tt>IntTable</tt> qui est une sorte de dictionnaire qui permet d'associer des entiers à des chaînes de caractères.
+ </div>
+<br xmlns="">
+ 
+ <div xmlns="">
+   <b>Vos sources Java produites pendant l'examen devront être placées sous le répertoire <tt>EXAM</tt>
+   de votre compte <tt>($HOME)</tt> (qui est vide dans l'environnement de TP noté).
+   Sinon, elles ne seront pas récupérées.</b>
+ </div>
+<br xmlns="">
+
+  <div xmlns="">
+   Tout document papier est proscrit.
+  <br> 
+   La javadoc 19 est là : <a href="https://igm.univ-mlv.fr/~juge/javadoc-19/">https://igm.univ-mlv.fr/~juge/javadoc-19/</a>.
+  <br>
+   Les seuls documents électroniques autorisés sont les supports de cours à l'url 
+   <a href="https://igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/">https://igm.univ-mlv.fr/~forax/ens/java-avance/cours/pdf/</a>.
+ </div>
+<br xmlns="">
+  
+ <div xmlns="">
+  Vous avez le droit de lire le sujet jusqu'au bout, cela vous donnera une bonne idée de là où on veut aller !
+ </div>
+<br xmlns=""> 
+  
+ <h3 xmlns="">Exercice 1 - IntTable</h3>
+    <div xmlns="">
+     La classe <tt>IntTable</tt> dans le package <tt>fr.uge.table</tt> est une table qui associe des entiers à des chaînes de caractères.
+    <br>
+     La première partie du TP consiste à fournir une implantation de la classe <tt>IntTable</tt> qui utilise
+     une table de hachage comme stockage (<tt>storage</tt>) pour les couples chaînes de caractères/entier.
+     La seconde partie du TP consiste à ajouter une autre implantation (les deux doivent cohabiter) basée
+     sur les composants d'un record. Bien sûr, on n'utilisera <b>pas</b> l'héritage pour spécifier les
+     différentes implantations, mais la délégation car on veut que le fait qu'il y ait deux implantations
+     soit quelque chose de caché pour l'utilisateur de la classe <tt>IntTable</tt>.
+    <br>
+     Voici un exemple d'utilisation de <tt>IntTable</tt>
+     <pre width="100%">       IntTable table = new IntTable();
+       table.set("foo", 5);
+       table.set("bar", 22);
+       table.set("foo", 11);
+       System.out.println(table.size());  // 2
+       System.out.println(table.get("foo", -1));  // 11
+       System.out.println(table.get("jhksdfkjhsffhjksqk", -1));  // -1
+     </pre>
+     La méthode <tt>set</tt> permet d'associer à une chaîne de caractères un entier.
+     Si on appelle <tt>set</tt> plusieurs fois avec la même chaîne de caractères, la valeur associée est celle du dernier appel à <tt>set</tt>.
+    <br>
+     La méthode <tt>size</tt> renvoie le nombre de couples chaîne de caractères / entier qui sont stockés dans la table.
+    <br>
+     La méthode <tt>get</tt> permet d'obtenir la valeur associée préalablement
+     enregistrée. Dans le cas où il n'y a pas de valeur enregistrée, <tt>get</tt> renvoie la valeur du second argument (-1 dans l'exemple).
+    </div>
+<br xmlns="">
+    <div xmlns="">
+     Des tests unitaires correspondant à l'implantation sont ici :
+     <a href="https://www-igm.univ-mlv.fr/ens/Master/M1/2022-2023/JavaAvance/src/exam/IntTableTest.java">IntTableTest.java</a>.
+    <br>
+     Note : comme on utilise les tests unitaires JUnit sans Maven, dans la configuration de votre projet, il faut ajouter
+     la librairie JUnit 5, soit à partir du fichier <tt>IntTableTest.java</tt>, en cliquant sur l'annotation
+     <tt>@Test</tt> et en sélectionnant le quickfix "Fixup project ...", soit en sélectionnant les "Properties" du projet
+     (avec le bouton droit de la souris sur le projet) puis en ajoutant la librairie JUnit 5 (jupiter) au ClassPath.
+    </div>
+<br xmlns="">
+    <ol xmlns="">
+     <li>
+      Dans un premier temps, vous devez écrire un constructeur, la méthode <tt>set</tt> et la méthode <tt>size</tt>. 
+      En termes d'implantation, on souhaite utiliser une table de hachage
+      (il existe déjà une implantation des tables de hachage dans le JDK). Mais comme dans le futur on voudra avoir
+      plusieurs implantations, on va encapsuler la table de hachage dans un type <tt>MapImpl</tt>.
+     <br>
+      Créer une classe <tt>IntTable</tt> avec un champ <tt>storage</tt> qui stocke une instance de <tt>MapImpl</tt>.
+     <br>
+      Créer un type <tt>MapImpl</tt> à l'intérieur de <tt>IntTable</tt> qui stocke la table de hachage.
+     <br>
+      Écrire le constructeur qui initialise les choses proprement.
+     <br>
+      Écrire une méthode <tt>set</tt> dans la classe <tt>IntTable</tt> qui permet d'ajouter une chaîne de caractères
+      et un entier à la table, en délégant à une méthode <tt>set</tt> écrite dans la classe <tt>MapImpl</tt>.
+     <br>
+      Écrire la méthode <tt>size</tt> dans la classe <tt>IntTable</tt> qui renvoie le nombre de couples chaîne de
+      caractères / entier stockés dans la table, en délégant à une méthode <tt>size</tt> écrite dans
+      la classe <tt>MapImpl</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q1" passent.
+     </li>
+<br><li>
+      On souhaite ajouter la méthode <tt>get</tt> qui permet de demander la valeur associée à une chaîne de caractères
+      ou qui, s'il n'y a pas de valeur associée à la chaîne de caractères (le premier argument), renvoie une valeur
+      par défaut (le second argument) de <tt>get</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q2" passent.
+     </li>
+<br><li>
+      On souhaite ajouter une méthode <tt>apply</tt> qui renvoie une nouvelle <tt>IntTable</tt>
+      dont les valeurs sont calculées en appliquant une fonction aux valeurs de la table courante.
+     <br>
+      Par exemple, voici comment créer une nouvelle <tt>IntTable</tt> ayant les valeurs multipliées par 5
+      <pre width="100%">        var table = new IntTable();
+        table.set("foo", 1);
+        table.set("bar", 2);
+        var table2 = table.apply(x -&gt; 5 * x);
+        System.out.println(table2.get("foo", 0));  // 5
+        System.out.println(table2.get("bar", 0));  // 10
+      </pre>
+      Écrire la méthode <tt>apply</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q3" passent.
+     <br>
+      Note : si vous êtes vraiment balèze, vous pouvez écrire la méthode <tt>apply</tt> en utilisant un <tt>Stream</tt>.
+     <br>
+      Note 2: s'il vous vient l'idée d'écrire une version paresseuse / <i>lazy</i> de <tt>apply</tt>, chassez vite cette
+      idée de votre tête, <i>lazy</i> et mutable ne font pas bon ménage.
+     </li>
+<br><li>
+      Avant d'ajouter une autre façon de stocker les valeurs dans la table, on va implanter une méthode
+      <tt>recordComponentIndexes</tt> qui va nous aider à créer cette implantation.
+     <br>
+      La méthode <tt>recordComponentIndexes</tt> prend en paramètre un tableau de composants de record
+      (<tt>RecordComponent</tt>) et renvoie une table de hachage qui associe à un nom de composant
+       de record, un entier qui correspond à la position du composant dans le tableau.
+     <br>
+       Par exemple, avec le <tt>record Point(int x, int y)</tt>, la table de hachage renvoyée par la méthode <tt>recordComponentIndexes</tt> avec en paramètre le tableau des composants du record
+       <tt>Point</tt> doit contenir, pour "x" la valeur 0 et pour "y" la valeur 1.
+     <br>
+      Comme c'est une méthode d'aide, cette méthode ne doit pas être visible dans l'API de la classe <tt>IntTable</tt>
+      mais on doit quand même être capable de tester la méthode.
+     <br>
+      Écrire la méthode <tt>recordComponentIndexes</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q4" passent.
+     <br>
+      Il y a un point bonus si vous écrivez cette méthode en utilisant un <tt>Stream</tt>.
+     </li>
+<br><li>
+      On souhaite maintenant fournir une seconde façon de stocker des couples chaînes de caractères / entier
+      dans une <tt>IntTable</tt>, dans le cas où les chaînes de caractères sont les noms des composants d'un record.
+      On va appeler cette implantation <tt>RecordImpl</tt>.
+      L'idée est de stocker dans <tt>RecordImpl</tt>, un <tt>MapImpl</tt> créé en utilisant la table de hachage produite
+      par <tt>recordComponentIndexes()</tt> <b>et</b> un tableau d'entiers.
+      La taille du <tt>MapImpl</tt> doit être égale à la taille du tableau d'entiers.
+      Lorsque l'on cherche une valeur associée à une chaîne de caractères,
+      on va dans un premier temps utiliser le <tt>MapImpl</tt> pour trouver l'index, puis avec l'index,
+      on trouve l'entier correspondant en cherchant dans le second tableau.
+     <br>
+      Pour différencier les implantations, la façon de créer une table dans le cas où elle est liée à un
+      record est différente de la façon de créer une table liée à une table de hachage,
+      on introduit une méthode <tt>from</tt> qui prend en paramètre la classe d'un record et renvoie
+      une table utilisant l'implantation à base de composants d'un record.
+     <br>
+      Voici un exemple d'utilisation,
+      <pre width="100%">        record Person(String name, int age) {}
+
+        IntTable table = IntTable.from(Person.class);
+        System.out.println(table.size());  // 2
+      </pre>
+      Note : attention, la sémantique des méthodes publiques de <tt>IntTable</tt> n'est pas exactement
+      la même entre un <tt>MapImpl</tt> et une <tt>RecordImpl</tt>.
+     <br>
+      Pour commencer, créer un type <tt>RecordImpl</tt> qui stocke un <tt>MapImpl</tt>
+      ainsi que le tableau d'entiers à l'intérieur de la classe <tt>IntTable</tt>.
+     <br>
+      Puis écrire la méthode <tt>from</tt> sachant qu'il faut vérifier que la classe passée en paramètre
+      est bien un record.
+     <br>
+      Puis modifier le code des méthodes <tt>size</tt> pour renvoyer le nombre de composants du record
+      dans la cas de l'implantation à base de composants d'un record.
+     <br>
+      Vérifier que les tests unitaires marqués "Q5" passent. Attention, une partie des tests précédents
+      risque de ne plus fonctionner jusqu'à la question 7.
+      Nous vous conseillons de commenter le code de la méthode <tt>apply</tt> temporairement.
+     </li>
+<br><li>
+      On souhaite maintenant que les méthodes <tt>get</tt> et <tt>set</tt> fonctionnent avec l'implantation
+      à base de composants d'un record.
+     <br>
+      Voici un exemple d'utilisation :
+      <pre width="100%">        record Person(String name, int age) {}
+
+        var table = IntTable.from(Person.class);
+        table.set("name", 42);
+        System.out.println(table.get("name", -1));  // 42
+        System.out.println(table.get("age", -1));  // 0
+        System.out.println(table.get("jhksdfkjhsffhjksqk", -1));  // -1
+      </pre>
+     <br>
+      Si on appelle la méthode <tt>get</tt> avec une chaîne de caractères qui est le nom d'un composant mais dont la valeur n'a pas encore été associée par <tt>set</tt>, la valeur retournée est 0 (sinon, c'est la valeur associée qui est retournée).
+     <br>
+      Dans le cas où l'on appelle la méthode <tt>set</tt> avec une chaîne de caractères qui n'est pas le nom
+      d'un des composants, il faut lever une exception.
+     <br>
+     <br>
+      Modifier le code de <tt>IntTable</tt> pour que les méthodes <tt>get</tt> et <tt>set</tt> aient
+      le comportement décrit ci-dessus.
+     <br>
+      Vérifier que les tests unitaires marqués "Q6" passent.
+     </li>
+<br><li>
+      On souhaite que la méthode <tt>apply</tt> fonctionne aussi avec l'implantation à base de composants de record. Dans ce cas, la méthode en paramètre de <tt>apply</tt> est appliquée à l'entier associé à chaque composant ou à 0, si aucun entier n'a été associé au composant.
+      <br>
+      En terme de code, pour cette question, on vous demande d'utiliser le <i>pattern matching</i> pour faire la différence entre les deux implantations
+      et d'utiliser un <tt>Stream</tt> pour le nouveau code que vous introduisez.
+     <br>
+      Modifier la méthode <tt>apply</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q7" passent.
+     </li>
+<br><li>
+      <b>Optionnellement</b> : on souhaite ajouter la possibilité d'afficher la table.
+      Dans le cas de l'implantation à base de table de hachage, on souhaite que les couples chaîne de caractères / entier
+      soient affichés par ordre d'insertion et dans le cas de l'implantation à base de composants de record,
+      on souhaite que les couples chaîne de caractères / entier soient affichés par ordre de déclaration dans le record.
+     <br>
+      En terme d'affichage, les couples doivent être séparées par des virgules (avec un espace après la virgule),
+      chaque couple est joint par un '=' et l'ensemble des couples est inclus dans des accolades.
+     <br>
+      Par exemple,
+      <pre width="100%">       var table = new IntTable();
+       table.set("foo", 1);
+       table.set("bar", 2);
+       table.set("whizz", 3);
+       System.out.println(table);  // {foo=1, bar=2, whizz=3}
+      </pre>
+      Ici aussi, on vous demande d'utiliser le <i>pattern matching</i> et des <tt>Stream</tt>.
+     <br>
+      Vérifier que les tests unitaires marqués "Q8" passent.
+     </li>
+    </ol>
+ 
+<hr noshade="" size="1"><span style="float:right;" class="noprint"><div class="noprint"></div></span><div align="center" class="copyright">© Université de Marne-la-Vallée</div></div></div>
+</body></html>
