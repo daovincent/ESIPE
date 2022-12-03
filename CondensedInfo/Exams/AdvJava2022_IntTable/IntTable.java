@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Objects;
 import java.util.function.Function;
+import java.util.function.IntFunction;
+import java.util.function.IntUnaryOperator;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 public final class IntTable {
@@ -42,7 +45,7 @@ public final class IntTable {
         return new IntTable(new RecordImpl(recordComponentIndexes(c.getRecordComponents())));
     }
 
-    public IntTable apply(Function< Integer, Integer> func) {
+    public IntTable apply(IntUnaryOperator func) {
         Objects.requireNonNull(func);
         return new IntTable(storage.apply(func));
 
@@ -56,7 +59,7 @@ public final class IntTable {
         int size();
         int get(String str,int def);
 
-        Impl apply(Function< Integer, Integer> func);
+        Impl apply(IntUnaryOperator func);
         @Override
         String toString();
     }
@@ -72,9 +75,9 @@ public final class IntTable {
             return table.getOrDefault(str,def);
         }
 
-        public MapImpl apply(Function< Integer, Integer> func){
+        public MapImpl apply(IntUnaryOperator func){
             var tmp= new MapImpl();
-            table.forEach((key, value) -> tmp.set(key, func.apply(value)));
+            table.forEach((key, value) -> tmp.set(key, func.applyAsInt(value)));
             return tmp;
         }
         @Override
@@ -102,9 +105,9 @@ public final class IntTable {
         public int get(String str,int def){
             return table.getOrDefault(str,def);
         }
-        public Impl apply(Function< Integer, Integer> func){
+        public Impl apply(IntUnaryOperator func){
             var tmp= new RecordImpl(table);
-            table.forEach((key, value) -> tmp.set(key, func.apply(value)));
+            table.forEach((key, value) -> tmp.set(key, func.applyAsInt(value)));
             return tmp;
         }
         @Override
