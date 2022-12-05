@@ -55,7 +55,7 @@ Super because PECS
 First, in order to use the for ( var a : class ) , the "class" you want to iterate over has to be Iterable, so it needs to IMPLEMENT Iterable<The data you want to iterate over>.
   
   
-If the structure to iterate over is simple you might be able to do "return data.iterator()", doesn't cost too much time to try...
+If the structure to iterate over is simple you might be able to do "return data.iterator()", BUT DON'T ! It's actually highly inneficient to do a stream.iterator(), better implement it yourself
   
   
 Otherwise : 
