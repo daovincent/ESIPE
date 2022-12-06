@@ -56,6 +56,7 @@ public class Mystery {
 		} catch (ExecutionException e) {
 			System.out.println("oops");
 		}
+		executorService.shutdown();
 
 //		IntStream.range(0, nbThreads).forEach(j -> {
 //			new Thread(() -> {
